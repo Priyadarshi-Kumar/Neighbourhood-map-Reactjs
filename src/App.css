@@ -1,0 +1,187 @@
+.App {
+  position: relative;
+}
+#map {
+  height: 100vh;
+}
+
+/**
+* Styling side navbar and the searchbox
+*/
+.sidenavbar {
+  position: absolute;
+  z-index: 1000;
+  margin-top: 60px;
+}
+
+.sidenav {
+  width: 0px;
+  height: 100%;
+  position: fixed;
+  z-index: 8000;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidenav ol {
+  list-style-type: none;  
+}
+
+.sidenav li {
+  border-bottom: 1px solid brown;
+  padding: 4px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: 19px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav li:hover {
+  color: brown;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 32px;
+  margin-left: 50px;
+}
+
+.top-navbar {
+  position: absolute;
+  z-index: 4000;
+  display: flex;
+  flex-wrap: wrap;
+  left: 23%;
+}
+
+.searchBox {
+  margin-left: 10px;
+  margin-top: 14px;
+}
+
+.searchBox input {
+  border: 0;
+  border-bottom: 1px solid brown;
+  height: 24px;
+  width: 200px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: inherit;
+}
+
+.searchBox input:focus {
+  outline: none;
+}
+
+/**
+* styling the top navbar and the select elements
+*/
+.select {
+  -webkit-appearance: none;
+  position: relative;
+  border-radius: 3px;
+  margin: 8px 0 0 10px;
+  border-radius: 4px;
+  padding-left: 8px;
+}
+
+.select:after {
+  content: "▼";
+  position: absolute;
+  right: 4px;
+  top: 6px;
+  z-index: 1;
+  text-align: center;
+  height: 31px;
+  pointer-events: none;
+}
+
+.select__field {
+  height: 33px;
+  width: 300px;
+  padding: 5px 15px;
+  color: #fff;
+  background-color: brown;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+  -webkit-appearance: none;
+  /* for webkit browsers */
+  -moz-appearance: none;
+  /* for firefox */
+  appearance: none;
+  /* for modern browsers */
+}
+
+/* remove default caret for ie */
+
+.select__field::-ms-expand {
+  display: none;
+}
+
+.select__field:focus:invalid {
+  border-color: #ccc;
+}
+
+.select__field:required:valid {
+  border-color: #ccc;
+}
+
+/**
+* Styles for error message 
+*/
+.error-message {
+  font-size: 40px;
+  font-weight: bold;
+  color: red;
+}
+
+
+/**
+* Responsiveness for various devices with different screen resolution 
+*/
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+   }
+  .sidenav li {
+    font-size: 18px;
+   }
+ }
+
+ @media screen and (max-width: 827px) {
+  .top-navbar{
+    left: 6%;  
+  }
+  .select__field {
+    width: 200px;
+  }
+ }
+
+ @media screen and (max-width: 1193px) {
+  .top-navbar{
+    left: 15%; 
+  }
+ }
+
+ @media screen and (max-width: 577px) {
+  .top-navbar{
+    left: 0; 
+  }
+ }
+
+ @media screen and (max-width: 492px) {
+  .top-navbar{
+    left: 0; 
+  }
+  .sidenavbar {
+    margin-top: 100px;
+  }
+ }
