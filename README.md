@@ -3,6 +3,14 @@
 
 This project is a part of udacity front-end nanodegree. This application demonstrates how to build application using google maps with third party APIs. Here I have used Foursquare API to fetch the locations. ServiceWorker feature is automatically included in the production build while bootstrapping the app.
 
+## Functionalities
+<ol>
+ <li>Change locations and interest.</li>
+ <li>Markers for found results as per location and interest.</li>
+ <li>Filter locations from result using.</li>
+ <li>Responsive for different resolution screen.</li>
+</ol>
+
 ## Dependencies
  <ol>
     <li>escape-string-regexp</li>
