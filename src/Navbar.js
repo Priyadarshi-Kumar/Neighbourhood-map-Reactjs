@@ -17,6 +17,17 @@ class Navbar extends Component {
         document.getElementById("mySidenav").style.width = "0";
     }
 
+    /**
+    * open marker when a list item is clicked
+    */    
+    openMarker = (location) => {
+        this.props.markers.map(marker => {
+          if (marker.title === location) {
+            window.google.maps.event.trigger(marker, "click")
+          }
+        })
+      }
+
     render() {
         const allLocations = this.props.allLocations
         return (
@@ -29,7 +40,12 @@ class Navbar extends Component {
                     </div>
                     <ol aria-label='menu item'>
                         <li href="javascript:void(0)" className="closebtn" onClick={this.closeNav} aria-label='close'>&times;</li>
-                        {this.props.allLocations.map((location, index) => (<li  key= {index} tabIndex='0' aria-label={location.venue.name}>{location.venue.name}</li>))}
+                        {this.props.allLocations.map((location, index) => (<li  key= {index} 
+                        tabIndex='0' 
+                        onClick={() => {
+                            this.openMarker(location.venue.name);
+                          }}
+                        aria-label={location.venue.name}>{location.venue.name}</li>))}
                     </ol>
                 </div>
                 <span style={{ paddingTop: '3px', fontWeight: 'bold', marginLeft: '8px', borderRadius: '4px', paddingLeft: '4px', paddingRight: '4px', fontSize: '17px', cursor: 'pointer', color: 'white', display: 'block', backgroundColor: 'brown', height: '28px', border: '1px solid white' }} onClick={this.openNav}>&#9776; Search</span>

@@ -180,13 +180,14 @@ class App extends Component {
     }
     else {
       return (
-        <div className="App" role='application'>
+        <div className="App" role='main'>
           <Topnavbar
             handlePlaceChange={this.handlePlaceChange}
-            handleInterestChange={this.handleInterestChange} />
+            handleInterestChange={this.handleInterestChange}/>
 
           <Navbar allLocations={this.state.locations}
-            updateQuery={b => this.updateQuery(b)} />
+            updateQuery={b => this.updateQuery(b)} 
+            markers={ this.state.markers } />
 
           <div id="map" tabIndex='-1' aria-label="Map" role="application" ></div>
         </div>

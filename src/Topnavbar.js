@@ -21,7 +21,7 @@ class Topnavbar extends Component {
             <div>
                 <div className='top-navbar'>
                     <div className='select' aria-label='place selector'>
-                        <select tabIndex='0' ria-label='select place' onChange={this.handlePlaceChange} name='department' required className="select__field">
+                        <select tabIndex='0' aria-label='select place' onChange={this.handlePlaceChange} name='department' required className="select__field">
                             <option value='belgaum' default>Belgaum</option>
                             <option value='kolkata'>Kolkata</option>
                             <option value='chennai'>Chennai</option>
@@ -33,7 +33,7 @@ class Topnavbar extends Component {
                             <option value='noida'>Noida</option>
                         </select>
                     </div>
-                    <div className='select' ria-label='interest'>
+                    <div className='select' aria-label='interest'>
                         <select aria-label='select what you interested in' tabIndex='0' onChange={this.handleInterestChange} name='department' required className="select__field">
                             <option value='restaurant' default>Restaurant</option>
                             <option value='school'>School</option>

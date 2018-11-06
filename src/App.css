@@ -41,6 +41,7 @@
 
 .sidenav li:hover {
   color: brown;
+  cursor: pointer;
 }
 
 .sidenav .closebtn {
